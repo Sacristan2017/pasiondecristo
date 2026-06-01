@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  text-align: center;
+  margin: 0;
+  padding-top: 75px; /* Espacio para el header */
+  /*padding: 75px;*/
+  color: #333;
+  -webkit-tap-highlight-color: transparent;
+}
+h1 {
+  color: #2c3e50;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.final {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+.digit-box {
+  width: 60px;
+  height: 70px;
+  font-size: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdfdfd;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.digit-box.filled {
+  border-color: #4CAF50;
+  background-color: #f0fff0;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.tecla {
+  height: 60px;
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+.tecla:active {
+  background-color: #bdc3c7;
+  transform: scale(0.95);
+}
+.tecla.borrar {
+  background-color: #e74c3c;
+  color: white;
+}
+.tecla.enviar {
+  background-color: #3498db;
+  color: white;
+  /*grid-column: span 3;*/
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.actions {
+  margin: 20px 0;
+}
+.btn-reiniciar {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-reiniciar:active {
+  background-color: #8e44ad;
+}
+
+.resultados {
+  margin-top: 0px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.mensaje {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 15px 0;
+  min-height: 28px;
+}
+.mensaje.success {
+  color: #27ae60;
+}
+.mensaje.error {
+  color: #c0392b;
+}
+
+@media (max-width: 350px) {
+  .digit-box { width: 50px; height: 60px; font-size: 1.7rem; }
+  .tecla { height: 50px; font-size: 1.3rem; }
+}

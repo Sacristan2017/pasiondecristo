@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* VIDEO DE FONDO 
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+*/
+/* FONDO DE IMAGEN FIJA 
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('fondoGaleria.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}*/
+
+/* FONDO DEGRADADO SOBREO */
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000, #0a1a3f); /* Noche sagrada */
+  z-index: -1;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO EN COLUMNA */
+.logo {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  /*line-height: 1;*/
+  color: white;
+  align-items: center;
+}
+
+.uno {
+  font-size: 0.7rem;
+}
+
+.dos {
+  font-size: 1.2rem;
+}
+
+.tres {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* ANIMACIÓN ASPA (X) */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 60px; /* pegado justo debajo del header */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .nav.nav--open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: normal;
+  padding: 0 2rem;
+  /*background-color: rgba(0, 0, 0, 0.5);*/ /* Fondo semitransparente opcional */
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Estilos por línea */
+.rotulo span {
+  display: block;
+  /*margin: 0.5rem 0;
+  letter-spacing: 0.05rem;*/
+}
+
+.desde { font-size: 6rem; }
+.aniv { font-size: 3rem; }
+.ayud { font-size: 4rem; }
+.iglesia { font-size: 2rem;
+  letter-spacing: -2px;
+ }
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+
+/* Sugerencia para el footer */
+.footer {
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  margin-top: 2rem;
+}
+.footer-social {
+  margin-bottom: 1rem;
+}
+.footer-link {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: #fff;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+.footer-link:hover {
+  color: #ffd700;
+}
+.footer-email {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-email:hover {
+  text-decoration: underline;
+}
+.footer-copy {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}
